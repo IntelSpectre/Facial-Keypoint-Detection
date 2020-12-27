@@ -56,9 +56,9 @@ class Net(nn.Module):
         self.pool5 = nn.MaxPool2d(2,2) # 12/2
         # output Tensor for one image = (512, 6, 6)
         
-        # Linear Layers
+        # Fully Connected Layers
         self.fc1 = nn.Linear(512*6*6, 1024)
-        self.fc2 = nn.Linear(1024, 136)
+        self.fc2 = nn.Linear(1024, 136)  # 136 keypoints , which is 68 keypoints each for (x, y)
         
         
         ## Note that among the layers to add, consider including:
